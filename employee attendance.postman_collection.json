@@ -1,0 +1,1758 @@
+{
+	"info": {
+		"_postman_id": "62992e70-08ec-4fc1-9621-f5b2b2346a8b",
+		"name": "employee attendance",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "39101068"
+	},
+	"item": [
+		{
+			"name": "organization",
+			"item": [
+				{
+					"name": "createOrganization",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"company 5\",\r\n  \"longitude\": 30,\r\n  \"latitude\":  40\r\n \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/organization/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"organization",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "createOrganization",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"name\": \"company 5\",\r\n  \"longitude\": 30,\r\n  \"latitude\":  40\r\n \r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/organization/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"organization",
+										""
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "248"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"f8-p5srVc3x94ZRwKr3lM6cHLuLOck\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 30 Apr 2025 01:08:26 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"organization created\",\n    \"data\": {\n        \"organization\": {\n            \"name\": \"company 5\",\n            \"location\": {\n                \"type\": \"Point\",\n                \"coordinates\": [\n                    30,\n                    40\n                ]\n            },\n            \"_id\": \"6811780a5409963d3c65e4be\",\n            \"createdAt\": \"2025-04-30T01:08:26.118Z\",\n            \"updatedAt\": \"2025-04-30T01:08:26.118Z\",\n            \"__v\": 0\n        }\n    }\n}"
+						},
+						{
+							"name": "createOrganization",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"name\": \"company 5\",\r\n  \"longitude\": 30,\r\n  \"latitude\":  40\r\n \r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/organization/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"organization",
+										""
+									]
+								}
+							},
+							"status": "Conflict",
+							"code": 409,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "286"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"11e-QomSuCgofuY90gA1SQ2uWfx/YlE\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 30 Apr 2025 01:09:06 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Organization already exists\",\n    \"error\": {},\n    \"stack\": \"Error: Organization already exists\\n    at file:///C:/employee%20attendence/src/modules/organization/services/organization.services.js:16:21\\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\"\n}"
+						}
+					]
+				},
+				{
+					"name": "getAllOrganization",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/organization/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"organization",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "getAllOrganization",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/organization/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"organization",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "921"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"399-IL1SRZKh3jbiD3FyklpinzEGZsU\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 30 Apr 2025 01:09:21 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Done\",\n    \"data\": {\n        \"organizations\": [\n            {\n                \"location\": {\n                    \"type\": \"Point\",\n                    \"coordinates\": [\n                        41.2357,\n                        30.0444\n                    ]\n                },\n                \"_id\": \"680d5a22729f0f3359c61cd1\",\n                \"name\": \"company B\"\n            },\n            {\n                \"location\": {\n                    \"type\": \"Point\",\n                    \"coordinates\": [\n                        41.2357,\n                        40.0444\n                    ]\n                },\n                \"_id\": \"680d5a2f729f0f3359c61cd3\",\n                \"name\": \"company C\"\n            },\n            {\n                \"location\": {\n                    \"type\": \"Point\",\n                    \"coordinates\": [\n                        51,\n                        50\n                    ]\n                },\n                \"_id\": \"680d5a44729f0f3359c61cd5\",\n                \"name\": \"company C\"\n            },\n            {\n                \"location\": {\n                    \"type\": \"Point\",\n                    \"coordinates\": [\n                        100,\n                        90\n                    ]\n                },\n                \"_id\": \"680d5a52729f0f3359c61cd7\",\n                \"name\": \"company D\"\n            },\n            {\n                \"location\": {\n                    \"type\": \"Point\",\n                    \"coordinates\": [\n                        31.2357,\n                        30.0444\n                    ]\n                },\n                \"_id\": \"680d6bd1ed6dd5c742e96b4f\",\n                \"name\": \"company p\"\n            },\n            {\n                \"location\": {\n                    \"type\": \"Point\",\n                    \"coordinates\": [\n                        32.2357,\n                        31.0444\n                    ]\n                },\n                \"_id\": \"680d7bb3a9ebf632646df916\",\n                \"name\": \"company F\"\n            },\n            {\n                \"location\": {\n                    \"type\": \"Point\",\n                    \"coordinates\": [\n                        30,\n                        32.8\n                    ]\n                },\n                \"_id\": \"681041268095b64ba5826a6f\",\n                \"name\": \"company 55\"\n            },\n            {\n                \"location\": {\n                    \"type\": \"Point\",\n                    \"coordinates\": [\n                        30,\n                        40\n                    ]\n                },\n                \"_id\": \"6811780a5409963d3c65e4be\",\n                \"name\": \"company 5\"\n            }\n        ]\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "getOrganizationById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/organization/6811780a5409963d3c65e4be",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"organization",
+								"6811780a5409963d3c65e4be"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "getOrganizationById",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/organization/680d69a475cee4acb169a953",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"organization",
+										"680d69a475cee4acb169a953"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "280"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"118-aWjfIQWh034ltrdtwXc/OPNL8j8\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 30 Apr 2025 01:09:31 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"In-valid organization Id\",\n    \"error\": {},\n    \"stack\": \"Error: In-valid organization Id\\n    at file:///C:/employee%20attendence/src/modules/organization/services/organization.services.js:76:21\\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\"\n}"
+						},
+						{
+							"name": "getOrganizationById",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/organization/6811780a5409963d3c65e4be",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"organization",
+										"6811780a5409963d3c65e4be"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "146"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"92-Dw9tKURU/zDoFIWxiDafuYsBoAA\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 30 Apr 2025 01:09:58 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Done\",\n    \"data\": {\n        \"organization\": {\n            \"location\": {\n                \"type\": \"Point\",\n                \"coordinates\": [\n                    30,\n                    40\n                ]\n            },\n            \"_id\": \"6811780a5409963d3c65e4be\",\n            \"name\": \"company 5\"\n        }\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "updateOrganizationData",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"company 5\",\r\n  \"longitude\": 40,\r\n  \"latitude\": 50\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/organization/6811780a5409963d3c65e4be",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"organization",
+								"6811780a5409963d3c65e4be"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "updateOrganizationData",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"name\": \"company 5\",\r\n  \"longitude\": 40,\r\n  \"latitude\": 50\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/organization/6811780a5409963d3c65e4be",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"organization",
+										"6811780a5409963d3c65e4be"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "175"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"af-bsYc3wLjoi6w95R/kMILnnhssZM\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 30 Apr 2025 01:12:15 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"organization updated successfully\",\n    \"data\": {\n        \"organization\": {\n            \"location\": {\n                \"type\": \"Point\",\n                \"coordinates\": [\n                    40,\n                    50\n                ]\n            },\n            \"_id\": \"6811780a5409963d3c65e4be\",\n            \"name\": \"company 5\"\n        }\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "deleteOrganization",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/organization/680d5a44729f0f3359c61cd5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"organization",
+								"680d5a44729f0f3359c61cd5"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "deleteOrganization",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/organization/680d5a44729f0f3359c61cd5",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"organization",
+										"680d5a44729f0f3359c61cd5"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "44"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"2c-f1lV+zfJUiuRRUQC+EkEsdoHSb4\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 30 Apr 2025 01:12:58 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"organization deleted\",\n    \"data\": {}\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "employee",
+			"item": [
+				{
+					"name": "createEmployee",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"rana\",\r\n    \"email\":\"ranoon@gmail.com\",\r\n    \"phone\":\"01285872270\",\r\n    \"organizationId\":\"681041268095b64ba5826a6f\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/employee/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"employee",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "createEmployee",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\":\"rana\",\r\n    \"email\":\"ahmet98t0@gmail.com\",\r\n    \"phone\":\"01285872270\",\r\n    \"organizationId\":\"681041268095b64ba5826a6f\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/employee/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"employee",
+										""
+									]
+								}
+							},
+							"status": "Conflict",
+							"code": 409,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "262"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"106-wEQTuEyAVJME7TmBRNQF0eDU7Go\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 30 Apr 2025 01:15:35 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Email already exist\",\n    \"error\": {},\n    \"stack\": \"Error: Email already exist\\n    at file:///C:/employee%20attendence/src/modules/employee/services/employee.services.js:16:14\\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\"\n}"
+						},
+						{
+							"name": "createEmployee",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\":\"rana\",\r\n    \"email\":\"ranoon@gmail.com\",\r\n    \"phone\":\"01285872270\",\r\n    \"organizationId\":\"681041268095b64ba5826a6f\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/employee/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"employee",
+										""
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "276"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"114-IMuoPO8Qm9Q5Bdv+vEZGZlQLsGk\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 30 Apr 2025 01:15:55 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"employee created\",\n    \"data\": {\n        \"employee\": {\n            \"name\": \"rana\",\n            \"email\": \"ranoon@gmail.com\",\n            \"phone\": \"01285872270\",\n            \"organization\": \"681041268095b64ba5826a6f\",\n            \"_id\": \"681179cbe0dfeb59751baf06\",\n            \"createdAt\": \"2025-04-30T01:15:55.719Z\",\n            \"updatedAt\": \"2025-04-30T01:15:55.719Z\",\n            \"__v\": 0\n        }\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "getAllEmployees",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/employee/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"employee",
+								""
+							]
+						},
+						"description": "### GET /employee/\n\nThis endpoint retrieves a list of employees.\n\n#### Request\n\nNo request body is required for this endpoint.\n\n#### Response\n\nThe response will be in JSON format with the following schema:\n\n``` json\n{\n    \"type\": \"object\",\n    \"properties\": {\n        \"message\": {\n            \"type\": \"string\"\n        },\n        \"data\": {\n            \"type\": \"object\",\n            \"properties\": {\n                \"employees\": {\n                    \"type\": \"array\",\n                    \"items\": {\n                        \"type\": \"object\",\n                        \"properties\": {\n                            \"_id\": {\n                                \"type\": \"string\"\n                            },\n                            \"name\": {\n                                \"type\": \"string\"\n                            },\n                            \"email\": {\n                                \"type\": \"string\"\n                            },\n                            \"phone\": {\n                                \"type\": \"string\"\n                            },\n                            \"organization\": {\n                                \"type\": \"string\"\n                            },\n                            \"createdAt\": {\n                                \"type\": \"string\"\n                            },\n                            \"updatedAt\": {\n                                \"type\": \"string\"\n                            },\n                            \"__v\": {\n                                \"type\": \"number\"\n                            }\n                        }\n                    }\n                }\n            }\n        }\n    }\n}\n\n ```"
+					},
+					"response": [
+						{
+							"name": "getAllEmployees",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/employee/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"employee",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "4604"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"11fc-MDav4xSYvuLfjg6OKbOui5yFHhU\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 30 Apr 2025 01:16:16 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Done\",\n    \"data\": {\n        \"employees\": [\n            {\n                \"_id\": \"680d8386bfb96eb50e3ae959\",\n                \"name\": \"mmmmmmmmm\",\n                \"email\": \"ranaayman11@gmail.com\",\n                \"phone\": \"011111111111111\",\n                \"organization\": {\n                    \"_id\": \"680d5a52729f0f3359c61cd7\",\n                    \"name\": \"company D\"\n                },\n                \"createdAt\": \"2025-04-27T01:08:22.152Z\",\n                \"updatedAt\": \"2025-04-27T23:29:52.188Z\",\n                \"__v\": 0\n            },\n            {\n                \"_id\": \"680d838dbfb96eb50e3ae95d\",\n                \"name\": \"ranaa ayman\",\n                \"email\": \"ranaayman101@gmail.com\",\n                \"phone\": \"0128587220\",\n                \"organization\": {\n                    \"_id\": \"680d5a52729f0f3359c61cd7\",\n                    \"name\": \"company D\"\n                },\n                \"createdAt\": \"2025-04-27T01:08:29.532Z\",\n                \"updatedAt\": \"2025-04-27T01:08:29.532Z\",\n                \"__v\": 0\n            },\n            {\n                \"_id\": \"680d8396bfb96eb50e3ae961\",\n                \"name\": \"ranaa ayman\",\n                \"email\": \"ranaaym9an101@gmail.com\",\n                \"phone\": \"01285872290\",\n                \"organization\": {\n                    \"_id\": \"680d5a52729f0f3359c61cd7\",\n                    \"name\": \"company D\"\n                },\n                \"createdAt\": \"2025-04-27T01:08:38.292Z\",\n                \"updatedAt\": \"2025-04-27T01:08:38.292Z\",\n                \"__v\": 0\n            },\n            {\n                \"_id\": \"680d839dbfb96eb50e3ae965\",\n                \"name\": \"ranaa ayman\",\n                \"email\": \"ra-naaym9an101@gmail.com\",\n                \"phone\": \"01285872290\",\n                \"organization\": {\n                    \"_id\": \"680d5a52729f0f3359c61cd7\",\n                    \"name\": \"company D\"\n                },\n                \"createdAt\": \"2025-04-27T01:08:45.326Z\",\n                \"updatedAt\": \"2025-04-27T01:08:45.326Z\",\n                \"__v\": 0\n            },\n            {\n                \"_id\": \"680d83acbfb96eb50e3ae969\",\n                \"name\": \"ranaa ayman\",\n                \"email\": \"ra-naaym9an1010@gmail.com\",\n                \"phone\": \"01285872290\",\n                \"organization\": {\n                    \"_id\": \"680d5a52729f0f3359c61cd7\",\n                    \"name\": \"company D\"\n                },\n                \"createdAt\": \"2025-04-27T01:09:00.925Z\",\n                \"updatedAt\": \"2025-04-27T01:09:00.925Z\",\n                \"__v\": 0\n            },\n            {\n                \"_id\": \"680d83fdbfb96eb50e3ae96d\",\n                \"name\": \"mohamed\",\n                \"email\": \"mohamed@gmail.com\",\n                \"phone\": \"01285872200\",\n                \"organization\": {\n                    \"_id\": \"680d5a22729f0f3359c61cd1\",\n                    \"name\": \"company B\"\n                },\n                \"createdAt\": \"2025-04-27T01:10:21.995Z\",\n                \"updatedAt\": \"2025-04-27T01:10:21.995Z\",\n                \"__v\": 0\n            },\n            {\n                \"_id\": \"680d8404bfb96eb50e3ae971\",\n                \"name\": \"mohamed\",\n                \"email\": \"mohamed1@gmail.com\",\n                \"phone\": \"01285872200\",\n                \"organization\": {\n                    \"_id\": \"680d5a22729f0f3359c61cd1\",\n                    \"name\": \"company B\"\n                },\n                \"createdAt\": \"2025-04-27T01:10:28.449Z\",\n                \"updatedAt\": \"2025-04-27T01:10:28.449Z\",\n                \"__v\": 0\n            },\n            {\n                \"_id\": \"680d8409bfb96eb50e3ae975\",\n                \"name\": \"mohamed\",\n                \"email\": \"mohamed2@gmail.com\",\n                \"phone\": \"01285872200\",\n                \"organization\": {\n                    \"_id\": \"680d5a22729f0f3359c61cd1\",\n                    \"name\": \"company B\"\n                },\n                \"createdAt\": \"2025-04-27T01:10:33.491Z\",\n                \"updatedAt\": \"2025-04-27T01:10:33.491Z\",\n                \"__v\": 0\n            },\n            {\n                \"_id\": \"680d843fbfb96eb50e3ae979\",\n                \"name\": \"ahmed\",\n                \"email\": \"ahmed@gmail.com\",\n                \"phone\": \"01285872200\",\n                \"organization\": null,\n                \"createdAt\": \"2025-04-27T01:11:27.478Z\",\n                \"updatedAt\": \"2025-04-27T01:11:27.478Z\",\n                \"__v\": 0\n            },\n            {\n                \"_id\": \"680d8444bfb96eb50e3ae97d\",\n                \"name\": \"ahmed\",\n                \"email\": \"ahmed1@gmail.com\",\n                \"phone\": \"01285872200\",\n                \"organization\": null,\n                \"createdAt\": \"2025-04-27T01:11:32.569Z\",\n                \"updatedAt\": \"2025-04-27T01:11:32.569Z\",\n                \"__v\": 0\n            },\n            {\n                \"_id\": \"680d844cbfb96eb50e3ae981\",\n                \"name\": \"ahmed\",\n                \"email\": \"ahmed2@gmail.com\",\n                \"phone\": \"01285872200\",\n                \"organization\": null,\n                \"createdAt\": \"2025-04-27T01:11:40.070Z\",\n                \"updatedAt\": \"2025-04-27T01:11:40.070Z\",\n                \"__v\": 0\n            },\n            {\n                \"_id\": \"681041778095b64ba5826a73\",\n                \"name\": \"ahmettd\",\n                \"email\": \"ahmetttd2@gmail.com\",\n                \"phone\": \"+201285872290\",\n                \"organization\": {\n                    \"_id\": \"681041268095b64ba5826a6f\",\n                    \"name\": \"company 55\"\n                },\n                \"createdAt\": \"2025-04-29T03:03:19.039Z\",\n                \"updatedAt\": \"2025-04-29T03:03:19.039Z\",\n                \"__v\": 0\n            },\n            {\n                \"_id\": \"68113d99383a961bb2fe1b83\",\n                \"name\": \"ahmettdll\",\n                \"email\": \"ahmetttd22@gmail.com\",\n                \"phone\": \"+201285872290\",\n                \"organization\": {\n                    \"_id\": \"681041268095b64ba5826a6f\",\n                    \"name\": \"company 55\"\n                },\n                \"createdAt\": \"2025-04-29T20:59:05.630Z\",\n                \"updatedAt\": \"2025-04-29T20:59:05.630Z\",\n                \"__v\": 0\n            },\n            {\n                \"_id\": \"68113dc9eb8b44f805599ac0\",\n                \"name\": \"ahmettdll\",\n                \"email\": \"ahmetttd222@gmail.com\",\n                \"phone\": \"+201285872290\",\n                \"organization\": {\n                    \"_id\": \"681041268095b64ba5826a6f\",\n                    \"name\": \"company 55\"\n                },\n                \"createdAt\": \"2025-04-29T20:59:53.643Z\",\n                \"updatedAt\": \"2025-04-29T20:59:53.643Z\",\n                \"__v\": 0\n            },\n            {\n                \"_id\": \"6811489199050b8f7d694924\",\n                \"name\": \"ahmettdll\",\n                \"email\": \"ahmetttd2022@gmail.com\",\n                \"phone\": \"+201285872290\",\n                \"organization\": {\n                    \"_id\": \"681041268095b64ba5826a6f\",\n                    \"name\": \"company 55\"\n                },\n                \"createdAt\": \"2025-04-29T21:45:53.604Z\",\n                \"updatedAt\": \"2025-04-29T21:45:53.604Z\",\n                \"__v\": 0\n            },\n            {\n                \"_id\": \"681148dfdba4b95e23f9eb3c\",\n                \"name\": \"ahmettdll\",\n                \"email\": \"ahmett0@gmail.com\",\n                \"phone\": \"+201285872290\",\n                \"organization\": {\n                    \"_id\": \"681041268095b64ba5826a6f\",\n                    \"name\": \"company 55\"\n                },\n                \"createdAt\": \"2025-04-29T21:47:11.425Z\",\n                \"updatedAt\": \"2025-04-29T21:47:11.425Z\",\n                \"__v\": 0\n            },\n            {\n                \"_id\": \"6811491813eb06d81a85451f\",\n                \"name\": \"ahmettdll\",\n                \"email\": \"ahmet98t0@gmail.com\",\n                \"phone\": \"+201285872290\",\n                \"organization\": {\n                    \"_id\": \"681041268095b64ba5826a6f\",\n                    \"name\": \"company 55\"\n                },\n                \"createdAt\": \"2025-04-29T21:48:08.113Z\",\n                \"updatedAt\": \"2025-04-29T21:48:08.113Z\",\n                \"__v\": 0\n            },\n            {\n                \"_id\": \"681179cbe0dfeb59751baf06\",\n                \"name\": \"rana\",\n                \"email\": \"ranoon@gmail.com\",\n                \"phone\": \"01285872270\",\n                \"organization\": {\n                    \"_id\": \"681041268095b64ba5826a6f\",\n                    \"name\": \"company 55\"\n                },\n                \"createdAt\": \"2025-04-30T01:15:55.719Z\",\n                \"updatedAt\": \"2025-04-30T01:15:55.719Z\",\n                \"__v\": 0\n            }\n        ]\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "getEmployeeById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/employee/681179cbe0dfeb59751baf06",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"employee",
+								"681179cbe0dfeb59751baf06"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "getEmployeeById",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/employee/681179cbe0dfeb59751baf06",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"employee",
+										"681179cbe0dfeb59751baf06"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "292"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"124-4sZZKQ96rmW1DVssWAzfjAwcFkw\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 30 Apr 2025 01:16:28 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Done\",\n    \"data\": {\n        \"employee\": {\n            \"_id\": \"681179cbe0dfeb59751baf06\",\n            \"name\": \"rana\",\n            \"email\": \"ranoon@gmail.com\",\n            \"phone\": \"01285872270\",\n            \"organization\": {\n                \"_id\": \"681041268095b64ba5826a6f\",\n                \"name\": \"company 55\"\n            },\n            \"createdAt\": \"2025-04-30T01:15:55.719Z\",\n            \"updatedAt\": \"2025-04-30T01:15:55.719Z\",\n            \"__v\": 0\n        }\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "updateEmployeeInfo",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\r\n    \"name\":\"ranoon\",\r\n    \"phone\":\"01111111111\",\r\n    \"organizationId\":\"680d5a2f729f0f3359c61cd3\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/employee/681179cbe0dfeb59751baf06",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"employee",
+								"681179cbe0dfeb59751baf06"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "updateEmployeeInfo",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n\r\n    \"name\":\"ranoon\",\r\n    \"phone\":\"01111111111\",\r\n    \"organizationId\":\"680d5a2f729f0f3359c61cd3\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/employee/681179cbe0dfeb59751baf06",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"employee",
+										"681179cbe0dfeb59751baf06"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "291"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"123-+4Os78Nog3Qjz646NyhDCjUyI9s\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 30 Apr 2025 01:18:11 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"employee updated successfully\",\n    \"data\": {\n        \"employee\": {\n            \"_id\": \"681179cbe0dfeb59751baf06\",\n            \"name\": \"ranoon\",\n            \"email\": \"ranoon@gmail.com\",\n            \"phone\": \"01111111111\",\n            \"organization\": \"681041268095b64ba5826a6f\",\n            \"createdAt\": \"2025-04-30T01:15:55.719Z\",\n            \"updatedAt\": \"2025-04-30T01:18:11.355Z\",\n            \"__v\": 0\n        }\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "deleteEmployee",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/employee/680d83acbfb96eb50e3ae969",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"employee",
+								"680d83acbfb96eb50e3ae969"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "deleteEmployee",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/employee/680d83acbfb96eb50e3ae969",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"employee",
+										"680d83acbfb96eb50e3ae969"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "53"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"35-E/Kg4BIyLUkFaksJ5mDtRv+/C0o\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 30 Apr 2025 01:19:01 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"employee deleted successfully\",\n    \"data\": {}\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "attendance",
+			"item": [
+				{
+					"name": "checkInEmployee",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"empId\":\"681179cbe0dfeb59751baf06\",\r\n    \"longitude\":30,\r\n    \"latitude\": 32.8\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/attendance/checkIn",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"attendance",
+								"checkIn"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "checkInEmplyee",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"empId\":\"681179cbe0dfeb59751baf06\",\r\n    \"longitude\":100,\r\n    \"latitude\": 90\r\n\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/attendance/checkIn",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"attendance",
+										"checkIn"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "316"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"13c-3iM/h5eDF6fZHofumtA9GbVuK2o\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 30 Apr 2025 01:20:10 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"You are not within range of the organization\",\n    \"error\": {},\n    \"stack\": \"Error: You are not within range of the organization\\n    at file:///C:/employee%20attendence/src/modules/attendance/services/attendance.services.js:62:18\\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\"\n}"
+						},
+						{
+							"name": "checkInEmplyee",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"empId\":\"681179cbe0dfeb59751baf06\",\r\n    \"longitude\":30,\r\n    \"latitude\": 32.8\r\n\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/attendance/checkIn",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"attendance",
+										"checkIn"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "449"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1c1-HbB1O8FSAL9WxSmiyuhcK/mWSzc\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 30 Apr 2025 01:20:56 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Check in successfully\",\n    \"data\": {\n        \"attendance\": {\n            \"employee\": \"681179cbe0dfeb59751baf06\",\n            \"organization\": {\n                \"_id\": \"681041268095b64ba5826a6f\",\n                \"name\": \"company 55\"\n            },\n            \"checkInLocation\": {\n                \"type\": \"Point\",\n                \"coordinates\": [\n                    30,\n                    32.8\n                ]\n            },\n            \"checkInTime\": \"2025-04-30T01:20:56.105Z\",\n            \"checkOutLocation\": null,\n            \"checkOutTime\": null,\n            \"status\": \"present\",\n            \"_id\": \"68117af8d1b61336613a9985\",\n            \"createdAt\": \"2025-04-30T01:20:56.113Z\",\n            \"updatedAt\": \"2025-04-30T01:20:56.113Z\",\n            \"__v\": 0\n        }\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "checkOutEmployee",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"empId\":\"680d8396bfb96eb50e3ae961\",\r\n    \"longitude\":100,\r\n    \"latitude\": 90\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/attendance/checkOut",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"attendance",
+								"checkOut"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"empId\":\"680d839dbfb96eb50e3ae965\",\r\n    \"longitude\":100,\r\n    \"latitude\": 90\r\n\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/attendance/checkOut",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"attendance",
+										"checkOut"
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "281"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"119-LrypdZc2UMpUcXZ7WvVsNnLjm68\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 30 Apr 2025 01:21:21 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"no active attendance found\",\n    \"error\": {},\n    \"stack\": \"Error: no active attendance found\\n    at file:///C:/employee%20attendence/src/modules/attendance/services/attendance.services.js:110:22\\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\"\n}"
+						},
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"empId\":\"680d8396bfb96eb50e3ae961\",\r\n    \"longitude\":100,\r\n    \"latitude\": 90\r\n\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/attendance/checkOut",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"attendance",
+										"checkOut"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "562"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"232-rHaawo4OUn1gQe+pvnqNDEYxuPA\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 30 Apr 2025 01:27:33 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"checkOut successfully\",\n    \"data\": {\n        \"checkOut\": {\n            \"checkInLocation\": {\n                \"type\": \"Point\",\n                \"coordinates\": [\n                    100,\n                    90\n                ]\n            },\n            \"checkOutLocation\": {\n                \"type\": \"Point\",\n                \"coordinates\": [\n                    100,\n                    90\n                ]\n            },\n            \"_id\": \"6811660dfdb43524410b0056\",\n            \"employee\": {\n                \"_id\": \"680d8396bfb96eb50e3ae961\",\n                \"name\": \"ranaa ayman\"\n            },\n            \"organization\": {\n                \"_id\": \"680d5a52729f0f3359c61cd7\",\n                \"name\": \"company D\"\n            },\n            \"checkInTime\": \"2025-04-29T23:51:41.760Z\",\n            \"checkOutTime\": \"2025-04-30T01:27:33.656Z\",\n            \"status\": \"checkedOut\",\n            \"createdAt\": \"2025-04-29T23:51:41.766Z\",\n            \"updatedAt\": \"2025-04-30T01:27:33.657Z\",\n            \"__v\": 0,\n            \"workDurationMinutes\": 95.86\n        }\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "getAttendanceById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/attendance/employee/680d8396bfb96eb50e3ae961",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"attendance",
+								"employee",
+								"680d8396bfb96eb50e3ae961"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/attendance/employee/680d8396bfb96eb50e3ae961",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"attendance",
+										"employee",
+										"680d8396bfb96eb50e3ae961"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "998"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"3e6-00LX7Gtz/VCsIWcQGW3iwGJ75WQ\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 30 Apr 2025 01:27:52 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Attendance records retrieved successfully\",\n    \"data\": {\n        \"0\": {\n            \"checkInLocation\": {\n                \"type\": \"Point\",\n                \"coordinates\": [\n                    100,\n                    90\n                ]\n            },\n            \"checkOutLocation\": {\n                \"type\": \"Point\",\n                \"coordinates\": [\n                    100,\n                    90\n                ]\n            },\n            \"_id\": \"6811660dfdb43524410b0056\",\n            \"employee\": {\n                \"_id\": \"680d8396bfb96eb50e3ae961\",\n                \"name\": \"ranaa ayman\"\n            },\n            \"organization\": {\n                \"_id\": \"680d5a52729f0f3359c61cd7\",\n                \"name\": \"company D\"\n            },\n            \"checkInTime\": \"2025-04-29T23:51:41.760Z\",\n            \"checkOutTime\": \"2025-04-30T01:27:33.656Z\",\n            \"status\": \"checkedOut\",\n            \"createdAt\": \"2025-04-29T23:51:41.766Z\",\n            \"updatedAt\": \"2025-04-30T01:27:33.657Z\",\n            \"__v\": 0,\n            \"workDurationMinutes\": 95.86\n        },\n        \"1\": {\n            \"checkInLocation\": {\n                \"type\": \"Point\",\n                \"coordinates\": [\n                    100,\n                    90\n                ]\n            },\n            \"checkOutLocation\": null,\n            \"_id\": \"681172f86727eaed7e6d4455\",\n            \"employee\": {\n                \"_id\": \"680d8396bfb96eb50e3ae961\",\n                \"name\": \"ranaa ayman\"\n            },\n            \"organization\": {\n                \"_id\": \"680d5a52729f0f3359c61cd7\",\n                \"name\": \"company D\"\n            },\n            \"checkInTime\": \"2025-04-30T00:46:48.749Z\",\n            \"checkOutTime\": null,\n            \"status\": \"present\",\n            \"createdAt\": \"2025-04-30T00:46:48.756Z\",\n            \"updatedAt\": \"2025-04-30T00:46:48.756Z\",\n            \"__v\": 0\n        }\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "attendanceOfday",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/attendance/today/680d8396bfb96eb50e3ae961",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"attendance",
+								"today",
+								"680d8396bfb96eb50e3ae961"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/attendance/today/680d8396bfb96eb50e3ae961",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"attendance",
+										"today",
+										"680d8396bfb96eb50e3ae961"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "569"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"239-pNoyJS4sHqwP6R13Y1ywvjekxTQ\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 30 Apr 2025 01:28:11 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Today's attendance retrieved successfully\",\n    \"data\": {\n        \"checkInLocation\": {\n            \"type\": \"Point\",\n            \"coordinates\": [\n                100,\n                90\n            ]\n        },\n        \"checkOutLocation\": {\n            \"type\": \"Point\",\n            \"coordinates\": [\n                100,\n                90\n            ]\n        },\n        \"_id\": \"6811660dfdb43524410b0056\",\n        \"employee\": {\n            \"_id\": \"680d8396bfb96eb50e3ae961\",\n            \"name\": \"ranaa ayman\"\n        },\n        \"organization\": {\n            \"_id\": \"680d5a52729f0f3359c61cd7\",\n            \"name\": \"company D\"\n        },\n        \"checkInTime\": \"2025-04-29T23:51:41.760Z\",\n        \"checkOutTime\": \"2025-04-30T01:27:33.656Z\",\n        \"status\": \"checkedOut\",\n        \"createdAt\": \"2025-04-29T23:51:41.766Z\",\n        \"updatedAt\": \"2025-04-30T01:27:33.657Z\",\n        \"__v\": 0,\n        \"workDurationMinutes\": 95.86\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "allAttendance",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/attendance/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"attendance",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/attendance/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"attendance",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "2922"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"b6a-Eth2YVwVxVjXmgQyFC6ZEy+dg6c\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 30 Apr 2025 01:28:23 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"All Attendance records retrieved successfully\",\n    \"data\": {\n        \"0\": {\n            \"checkInLocation\": {\n                \"type\": \"Point\",\n                \"coordinates\": [\n                    30,\n                    32.8\n                ]\n            },\n            \"checkOutLocation\": {\n                \"type\": \"Point\",\n                \"coordinates\": [\n                    30,\n                    32.8\n                ]\n            },\n            \"_id\": \"68114cefc5626fba737443fb\",\n            \"employee\": {\n                \"_id\": \"681041778095b64ba5826a73\",\n                \"name\": \"ahmettd\"\n            },\n            \"organization\": {\n                \"_id\": \"681041268095b64ba5826a6f\",\n                \"name\": \"company 55\"\n            },\n            \"checkInTime\": \"2025-04-29T22:04:31.607Z\",\n            \"checkOutTime\": \"2025-04-29T23:05:52.293Z\",\n            \"status\": \"checkedOut\",\n            \"createdAt\": \"2025-04-29T22:04:31.608Z\",\n            \"updatedAt\": \"2025-04-29T23:05:52.295Z\",\n            \"__v\": 0\n        },\n        \"1\": {\n            \"checkInLocation\": {\n                \"type\": \"Point\",\n                \"coordinates\": [\n                    100,\n                    90\n                ]\n            },\n            \"checkOutLocation\": {\n                \"type\": \"Point\",\n                \"coordinates\": [\n                    100,\n                    90\n                ]\n            },\n            \"_id\": \"68115e74030cb9bc20070b4c\",\n            \"employee\": {\n                \"_id\": \"680d8386bfb96eb50e3ae959\",\n                \"name\": \"mmmmmmmmm\"\n            },\n            \"organization\": {\n                \"_id\": \"680d5a52729f0f3359c61cd7\",\n                \"name\": \"company D\"\n            },\n            \"checkInTime\": \"2025-04-29T23:19:16.991Z\",\n            \"checkOutTime\": \"2025-04-29T23:21:46.942Z\",\n            \"status\": \"checkedOut\",\n            \"createdAt\": \"2025-04-29T23:19:16.998Z\",\n            \"updatedAt\": \"2025-04-29T23:21:46.943Z\",\n            \"__v\": 0,\n            \"workDurationMinutes\": 0.04\n        },\n        \"2\": {\n            \"checkInLocation\": {\n                \"type\": \"Point\",\n                \"coordinates\": [\n                    100,\n                    90\n                ]\n            },\n            \"checkOutLocation\": {\n                \"type\": \"Point\",\n                \"coordinates\": [\n                    100,\n                    90\n                ]\n            },\n            \"_id\": \"68115ebc030cb9bc20070b52\",\n            \"employee\": {\n                \"_id\": \"680d839dbfb96eb50e3ae965\",\n                \"name\": \"ranaa ayman\"\n            },\n            \"organization\": {\n                \"_id\": \"680d5a52729f0f3359c61cd7\",\n                \"name\": \"company D\"\n            },\n            \"checkInTime\": \"2025-04-29T23:20:28.347Z\",\n            \"checkOutTime\": \"2025-04-29T23:25:24.739Z\",\n            \"status\": \"checkedOut\",\n            \"createdAt\": \"2025-04-29T23:20:28.348Z\",\n            \"updatedAt\": \"2025-04-29T23:25:24.741Z\",\n            \"__v\": 0,\n            \"workDurationMinutes\": 4.94\n        },\n        \"3\": {\n            \"checkInLocation\": {\n                \"type\": \"Point\",\n                \"coordinates\": [\n                    100,\n                    90\n                ]\n            },\n            \"checkOutLocation\": {\n                \"type\": \"Point\",\n                \"coordinates\": [\n                    100,\n                    90\n                ]\n            },\n            \"_id\": \"6811660dfdb43524410b0056\",\n            \"employee\": {\n                \"_id\": \"680d8396bfb96eb50e3ae961\",\n                \"name\": \"ranaa ayman\"\n            },\n            \"organization\": {\n                \"_id\": \"680d5a52729f0f3359c61cd7\",\n                \"name\": \"company D\"\n            },\n            \"checkInTime\": \"2025-04-29T23:51:41.760Z\",\n            \"checkOutTime\": \"2025-04-30T01:27:33.656Z\",\n            \"status\": \"checkedOut\",\n            \"createdAt\": \"2025-04-29T23:51:41.766Z\",\n            \"updatedAt\": \"2025-04-30T01:27:33.657Z\",\n            \"__v\": 0,\n            \"workDurationMinutes\": 95.86\n        },\n        \"4\": {\n            \"checkInLocation\": {\n                \"type\": \"Point\",\n                \"coordinates\": [\n                    100,\n                    90\n                ]\n            },\n            \"checkOutLocation\": null,\n            \"_id\": \"681172f86727eaed7e6d4455\",\n            \"employee\": {\n                \"_id\": \"680d8396bfb96eb50e3ae961\",\n                \"name\": \"ranaa ayman\"\n            },\n            \"organization\": {\n                \"_id\": \"680d5a52729f0f3359c61cd7\",\n                \"name\": \"company D\"\n            },\n            \"checkInTime\": \"2025-04-30T00:46:48.749Z\",\n            \"checkOutTime\": null,\n            \"status\": \"present\",\n            \"createdAt\": \"2025-04-30T00:46:48.756Z\",\n            \"updatedAt\": \"2025-04-30T00:46:48.756Z\",\n            \"__v\": 0\n        },\n        \"5\": {\n            \"checkInLocation\": {\n                \"type\": \"Point\",\n                \"coordinates\": [\n                    30,\n                    32.8\n                ]\n            },\n            \"checkOutLocation\": null,\n            \"_id\": \"68117af8d1b61336613a9985\",\n            \"employee\": {\n                \"_id\": \"681179cbe0dfeb59751baf06\",\n                \"name\": \"ranoon\"\n            },\n            \"organization\": {\n                \"_id\": \"681041268095b64ba5826a6f\",\n                \"name\": \"company 55\"\n            },\n            \"checkInTime\": \"2025-04-30T01:20:56.105Z\",\n            \"checkOutTime\": null,\n            \"status\": \"present\",\n            \"createdAt\": \"2025-04-30T01:20:56.113Z\",\n            \"updatedAt\": \"2025-04-30T01:20:56.113Z\",\n            \"__v\": 0\n        }\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "checkWithinRange",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "",
+								"value": "",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/attendance/within-range?lng=10&lat=30&employeeId=680d8396bfb96eb50e3ae961",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"attendance",
+								"within-range"
+							],
+							"query": [
+								{
+									"key": "lng",
+									"value": "10"
+								},
+								{
+									"key": "lat",
+									"value": "30"
+								},
+								{
+									"key": "employeeId",
+									"value": "680d8396bfb96eb50e3ae961"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "",
+										"value": "",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:3000/attendance/within-range?lng=100&lat=90&employeeId=680d8396bfb96eb50e3ae961",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"attendance",
+										"within-range"
+									],
+									"query": [
+										{
+											"key": "lng",
+											"value": "100"
+										},
+										{
+											"key": "lat",
+											"value": "90"
+										},
+										{
+											"key": "employeeId",
+											"value": "680d8396bfb96eb50e3ae961"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "66"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"42-4BI9O9m1CAP1h1w0kGwoRgEjEkc\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 30 Apr 2025 01:28:38 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Employee range checked\",\n    \"data\": {\n        \"isWithinRange\": true\n    }\n}"
+						},
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "",
+										"value": "",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:3000/attendance/within-range?lng=10&lat=30&employeeId=680d8396bfb96eb50e3ae961",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"attendance",
+										"within-range"
+									],
+									"query": [
+										{
+											"key": "lng",
+											"value": "10"
+										},
+										{
+											"key": "lat",
+											"value": "30"
+										},
+										{
+											"key": "employeeId",
+											"value": "680d8396bfb96eb50e3ae961"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "67"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"43-gp5PhLhj638g4Wyh8eIBXnMSVDs\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 30 Apr 2025 01:28:53 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Employee range checked\",\n    \"data\": {\n        \"isWithinRange\": false\n    }\n}"
+						}
+					]
+				}
+			]
+		}
+	]
+}
