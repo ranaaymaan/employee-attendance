@@ -46,6 +46,7 @@ location:{
 },
 };
 
+// Check if the employee is within range of the organization
 
 const empRange = await dbServices.findOne({
     model : organizationModel,
