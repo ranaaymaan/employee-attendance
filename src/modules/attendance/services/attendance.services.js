@@ -113,7 +113,7 @@ export const checkOutEmployee = asyncHandler(async(req,res,next)=>{
       const checkOutTime = Date.now();
       const durationMs =
         checkOutTime - new Date(attendance.checkInTime);
-      const durationHours = parseFloat(
+      const durationTime = parseFloat(
         (durationMs / (1000 * 60 )).toFixed(2)
       );
 
@@ -129,7 +129,7 @@ export const checkOutEmployee = asyncHandler(async(req,res,next)=>{
           coordinates: [longitude, latitude],
         },
         status: "checkedOut",
-       workDurationMinutes: durationHours,
+       workDurationMinutes: durationTime,
       },
       populate:[
      {path:"employee", select:"name"}, 

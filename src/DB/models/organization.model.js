@@ -27,7 +27,7 @@ const organizationSchema = new Schema(
 );
 
 
-organizationSchema.index({ location: "2dsphere" });
+organizationSchema.index({ location: "2dsphere" });   
 
 
 
